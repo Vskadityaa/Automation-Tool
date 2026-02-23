@@ -1,0 +1,308 @@
+<svg width="1200" height="1740" xmlns="http://www.w3.org/2000/svg">
+<rect x="10" y="10" width="1180" height="1720" fill="none" stroke="black" stroke-width="2"/>
+<text x="20" y="50" font-weight="bold">SYSTEM</text>
+<text x="320" y="50" font-weight="bold">OBJECT</text>
+<text x="600" y="50" font-weight="bold">DESCRIPTION</text>
+<text x="900" y="50" font-weight="bold">SIGNAL</text>
+<text x="20" y="72"></text>
+<text x="320" y="72">refer to system schedule</text>
+<text x="600" y="72"></text>
+<text x="900" y="72">CSF-B1-01, CSF-B1-02, CSF-B1-04</text>
+<text x="20" y="94">GCEC_B1_HVAC_CSF-B1-04</text>
+<text x="320" y="94">SF4-DP</text>
+<text x="600" y="94">Supply Fan 4 Differential Pressure</text>
+<text x="900" y="94">0-10Vdc</text>
+<text x="20" y="116">GCEC_B1_HVAC_CSF-B1-01</text>
+<text x="320" y="116">ZN-CO1</text>
+<text x="600" y="116">Zone CO 1</text>
+<text x="900" y="116">0-10Vdc</text>
+<text x="20" y="138">GCEC_B1_HVAC_CSF-B1-01</text>
+<text x="320" y="138">ZN-CO2</text>
+<text x="600" y="138">Zone CO 2</text>
+<text x="900" y="138">0-10Vdc</text>
+<text x="20" y="160">GCEC_B1_HVAC_CSF-B1-01</text>
+<text x="320" y="160">ZN-CO3</text>
+<text x="600" y="160">Zone CO 3</text>
+<text x="900" y="160">0-10Vdc</text>
+<text x="20" y="182">GCEC_B1_HVAC_CSF-B1-01</text>
+<text x="320" y="182">ZN-CO4</text>
+<text x="600" y="182">Zone CO 4</text>
+<text x="900" y="182">0-10Vdc</text>
+<text x="20" y="204">GCEC_B1_HVAC_CSF-B1-01</text>
+<text x="320" y="204">ZN-CO5</text>
+<text x="600" y="204">Zone CO 5</text>
+<text x="900" y="204">0-10Vdc</text>
+<text x="20" y="226">GCEC_B1_HVAC_CSF-B1-04</text>
+<text x="320" y="226">SF4-S</text>
+<text x="600" y="226">Supply Fan 4 Status</text>
+<text x="900" y="226">VFC</text>
+<text x="20" y="248">GCEC_B1_HVAC_CSF-B1-01</text>
+<text x="320" y="248">SF1-S</text>
+<text x="600" y="248">Supply Fan 1 Status</text>
+<text x="900" y="248">VFC</text>
+<text x="20" y="270"></text>
+<text x="320" y="270"></text>
+<text x="600" y="270"></text>
+<text x="900" y="270"></text>
+<text x="20" y="292">GCEC_B1_HVAC_CSF-B1-01</text>
+<text x="320" y="292">SF1-C</text>
+<text x="600" y="292">Supply Fan 1 Command</text>
+<text x="900" y="292">24Vac</text>
+<text x="20" y="314">GCEC_B1_HVAC_CSF-B1-02</text>
+<text x="320" y="314">SF2-C</text>
+<text x="600" y="314">Supply Fan 2 Command</text>
+<text x="900" y="314">24Vac</text>
+<text x="20" y="336">GCEC_B1_HVAC_CSF-B1-04</text>
+<text x="320" y="336">SF4-C</text>
+<text x="600" y="336">Supply Fan 4 Command</text>
+<text x="900" y="336">24Vac</text>
+<text x="20" y="358"></text>
+<text x="320" y="358"></text>
+<text x="600" y="358"></text>
+<text x="900" y="358"></text>
+<text x="20" y="380"></text>
+<text x="320" y="380"></text>
+<text x="600" y="380"></text>
+<text x="900" y="380"></text>
+<text x="20" y="402"></text>
+<text x="320" y="402"></text>
+<text x="600" y="402"></text>
+<text x="900" y="402"></text>
+<text x="20" y="424">GCEC_B1_HVAC_CSF-B1-04</text>
+<text x="320" y="424">SF4-O</text>
+<text x="600" y="424">Supply Fan 4 Speed</text>
+<text x="900" y="424">0-10Vdc</text>
+<text x="20" y="446">GCEC_B1_HVAC_CSF-B1-01</text>
+<text x="320" y="446">SF1-O</text>
+<text x="600" y="446">Supply Fan 1 Speed</text>
+<text x="900" y="446">0-10Vdc</text>
+<text x="20" y="468">GCEC_B1_HVAC_CSF-B1-02</text>
+<text x="320" y="468">SF2-O</text>
+<text x="600" y="468">Supply Fan 2 Speed</text>
+<text x="900" y="468">0-10Vdc</text>
+<text x="20" y="490"></text>
+<text x="320" y="490">refer to system schedule</text>
+<text x="600" y="490"></text>
+<text x="900" y="490">JF-B1-01/02/03, CSF-B1-02</text>
+<text x="20" y="512">GCEC_B1_HVAC_CSF-B1-02</text>
+<text x="320" y="512">ZN-CO6</text>
+<text x="600" y="512">Zone CO 6</text>
+<text x="900" y="512">0-10Vdc</text>
+<text x="20" y="534">GCEC_B1_HVAC_CSF-B1-02</text>
+<text x="320" y="534">ZN-CO7</text>
+<text x="600" y="534">Zone CO 7</text>
+<text x="900" y="534">0-10Vdc</text>
+<text x="20" y="556">GCEC_B1_HVAC_CSF-B1-02</text>
+<text x="320" y="556">ZN-CO8</text>
+<text x="600" y="556">Zone CO 8</text>
+<text x="900" y="556">0-10Vdc</text>
+<text x="20" y="578">GCEC_B1_HVAC_CSF-B1-02</text>
+<text x="320" y="578">ZN-CO9</text>
+<text x="600" y="578">Zone CO 9</text>
+<text x="900" y="578">0-10Vdc</text>
+<text x="20" y="600">GCEC_B1_HVAC_CSF-B1-02</text>
+<text x="320" y="600">ZN-CO10</text>
+<text x="600" y="600">Zone CO 10</text>
+<text x="900" y="600">0-10Vdc</text>
+<text x="20" y="622">GCEC_B1_HVAC_CSF-B1-02</text>
+<text x="320" y="622">SF2-A</text>
+<text x="600" y="622">Supply Fan 2 Fault</text>
+<text x="900" y="622">VFC</text>
+<text x="20" y="644">GCEC_B1_HVAC_JF-B1-01</text>
+<text x="320" y="644">JF1-S</text>
+<text x="600" y="644">Jet Fan 1 Status</text>
+<text x="900" y="644">VFC</text>
+<text x="20" y="666">GCEC_B1_HVAC_JF-B1-02</text>
+<text x="320" y="666">JF2-S</text>
+<text x="600" y="666">Jet Fan 2 Status</text>
+<text x="900" y="666">VFC</text>
+<text x="20" y="688">GCEC_B1_HVAC_JF-B1-03</text>
+<text x="320" y="688">JF3-S</text>
+<text x="600" y="688">Jet Fan 3 Status</text>
+<text x="900" y="688">VFC</text>
+<text x="20" y="710">GCEC_B1_HVAC_JF-B1-01</text>
+<text x="320" y="710">JF1-S</text>
+<text x="600" y="710">Jet Fan 1 Command</text>
+<text x="900" y="710">24Vac</text>
+<text x="20" y="732">GCEC_B1_HVAC_JF-B1-02</text>
+<text x="320" y="732">JF2-S</text>
+<text x="600" y="732">Jet Fan 2 Command</text>
+<text x="900" y="732">24Vac</text>
+<text x="20" y="754">GCEC_B1_HVAC_JF-B1-03</text>
+<text x="320" y="754">JF3-S</text>
+<text x="600" y="754">Jet Fan 3 Command</text>
+<text x="900" y="754">24Vac</text>
+<text x="20" y="776">GCEC_B1_HVAC_JF-B1-03</text>
+<text x="320" y="776">JF3-O</text>
+<text x="600" y="776">Jet Fan 3 Speed</text>
+<text x="900" y="776">0-10Vdc</text>
+<text x="20" y="798"></text>
+<text x="320" y="798"></text>
+<text x="600" y="798"></text>
+<text x="900" y="798"></text>
+<text x="20" y="820"></text>
+<text x="320" y="820"></text>
+<text x="600" y="820"></text>
+<text x="900" y="820"></text>
+<text x="20" y="842"></text>
+<text x="320" y="842"></text>
+<text x="600" y="842"></text>
+<text x="900" y="842"></text>
+<text x="20" y="864">GCEC_B1_HVAC_JF-B1-01</text>
+<text x="320" y="864">JF1-O</text>
+<text x="600" y="864">Jet Fan 1 Speed</text>
+<text x="900" y="864">0-10Vdc</text>
+<text x="20" y="886">GCEC_B1_HVAC_JF-B1-02</text>
+<text x="320" y="886">JF2-O</text>
+<text x="600" y="886">Jet Fan 2 Speed</text>
+<text x="900" y="886">0-10Vdc</text>
+<text x="20" y="908"></text>
+<text x="320" y="908">refer to system schedule</text>
+<text x="600" y="908"></text>
+<text x="900" y="908">OAF-B1-04, OAF-B1-05, CSF-B1-01/04, 
+JF-B1-01/02/03</text>
+<text x="20" y="930">GCEC_B1_HVAC_CSF-B1-01</text>
+<text x="320" y="930">SF1-A</text>
+<text x="600" y="930">Supply Fan 1 Fault</text>
+<text x="900" y="930">VFC</text>
+<text x="20" y="952">GCEC_B1_HVAC_CSF-B1-04</text>
+<text x="320" y="952">SF4-A</text>
+<text x="600" y="952">Supply Fan 4 Fault</text>
+<text x="900" y="952">VFC</text>
+<text x="20" y="974">GCEC_B1_HVAC_JF-B1-01</text>
+<text x="320" y="974">JF1-A</text>
+<text x="600" y="974">Jet Fan 1 Fault</text>
+<text x="900" y="974">VFC</text>
+<text x="20" y="996">GCEC_B1_HVAC_JF-B1-02</text>
+<text x="320" y="996">JF2-A</text>
+<text x="600" y="996">Jet Fan 2 Fault</text>
+<text x="900" y="996">VFC</text>
+<text x="20" y="1018">GCEC_B1_HVAC_JF-B1-03</text>
+<text x="320" y="1018">JF3-A</text>
+<text x="600" y="1018">Jet Fan 3 Fault</text>
+<text x="900" y="1018">VFC</text>
+<text x="20" y="1040">GCEC_B1_HVAC_OAF-B1-05</text>
+<text x="320" y="1040">OAF5-A</text>
+<text x="600" y="1040">Outside Air Fan 5 Fault</text>
+<text x="900" y="1040">VFC</text>
+<text x="20" y="1062">GCEC_B1_HVAC_OAF-B1-05</text>
+<text x="320" y="1062">OAF5-S</text>
+<text x="600" y="1062">Outside Air Fan 5 Status</text>
+<text x="900" y="1062">VFC</text>
+<text x="20" y="1084">GCEC_B1_HVAC_OAF-B1-04</text>
+<text x="320" y="1084">OAF4-A</text>
+<text x="600" y="1084">Outside Air Fan 4 Fault</text>
+<text x="900" y="1084">VFC</text>
+<text x="20" y="1106">GCEC_B1_HVAC_OAF-B1-04</text>
+<text x="320" y="1106">OAF4-S</text>
+<text x="600" y="1106">Outside Air Fan 4 Status</text>
+<text x="900" y="1106">VFC</text>
+<text x="20" y="1128"></text>
+<text x="320" y="1128"></text>
+<text x="600" y="1128"></text>
+<text x="900" y="1128"></text>
+<text x="20" y="1150">GCEC_B1_HVAC_OAF-B1-04</text>
+<text x="320" y="1150">OAF-C</text>
+<text x="600" y="1150">Outside Air Fan Command</text>
+<text x="900" y="1150">24Vac</text>
+<text x="20" y="1172">GCEC_B1_HVAC_OAF-B1-05</text>
+<text x="320" y="1172">OAF-C</text>
+<text x="600" y="1172">Outside Air Fan Command</text>
+<text x="900" y="1172">24Vac</text>
+<text x="20" y="1194"></text>
+<text x="320" y="1194"></text>
+<text x="600" y="1194"></text>
+<text x="900" y="1194"></text>
+<text x="20" y="1216"></text>
+<text x="320" y="1216"></text>
+<text x="600" y="1216"></text>
+<text x="900" y="1216"></text>
+<text x="20" y="1238"></text>
+<text x="320" y="1238"></text>
+<text x="600" y="1238"></text>
+<text x="900" y="1238"></text>
+<text x="20" y="1260"></text>
+<text x="320" y="1260"></text>
+<text x="600" y="1260"></text>
+<text x="900" y="1260"></text>
+<text x="20" y="1282"></text>
+<text x="320" y="1282"></text>
+<text x="600" y="1282"></text>
+<text x="900" y="1282"></text>
+<text x="20" y="1304"></text>
+<text x="320" y="1304"></text>
+<text x="600" y="1304"></text>
+<text x="900" y="1304"></text>
+<text x="20" y="1326">1. OAF-B1-04 is serving to PAC-B1-01A/01B & GEF-L0-06</text>
+<text x="320" y="1326"></text>
+<text x="600" y="1326"></text>
+<text x="900" y="1326"></text>
+<text x="20" y="1348">GCEC_B1_HVAC_PAC-B1-04</text>
+<text x="320" y="1348">ZN-T</text>
+<text x="600" y="1348">Zone Temperature</text>
+<text x="900" y="1348">10k Type2</text>
+<text x="20" y="1370">GCEC_B1_AIR_COMP_1</text>
+<text x="320" y="1370">COMP-FLT</text>
+<text x="600" y="1370">Compressor Fault</text>
+<text x="900" y="1370">VFC</text>
+<text x="20" y="1392">GCEC_B1_AIR_COMP_2</text>
+<text x="320" y="1392">COMP-FLT</text>
+<text x="600" y="1392">Compressor Fault</text>
+<text x="900" y="1392">VFC</text>
+<text x="20" y="1414">GCEC_B1_HVAC_PAC-B1-04</text>
+<text x="320" y="1414">UNIT-S</text>
+<text x="600" y="1414">Unit Status</text>
+<text x="900" y="1414">VFC</text>
+<text x="20" y="1436">GCEC_B1_HVAC_PAC-B1-04</text>
+<text x="320" y="1436">PB-S</text>
+<text x="600" y="1436">Manual Push Button Status</text>
+<text x="900" y="1436">VFC</text>
+<text x="20" y="1458"></text>
+<text x="320" y="1458"></text>
+<text x="600" y="1458"></text>
+<text x="900" y="1458"></text>
+<text x="20" y="1480"></text>
+<text x="320" y="1480"></text>
+<text x="600" y="1480"></text>
+<text x="900" y="1480"></text>
+<text x="20" y="1502">GCEC_B1_HVAC_PAC-B1-04</text>
+<text x="320" y="1502">CCW-S</text>
+<text x="600" y="1502">Unit Status</text>
+<text x="900" y="1502">VFC</text>
+<text x="20" y="1524">GCEC_B1_HVAC_PAC-B1-04</text>
+<text x="320" y="1524">UNIT-FLT</text>
+<text x="600" y="1524">Unit Fault</text>
+<text x="900" y="1524">VFC</text>
+<text x="20" y="1546">GCEC_B1_HVAC_PAC-B1-04</text>
+<text x="320" y="1546">COMP-C</text>
+<text x="600" y="1546">Compressor Command</text>
+<text x="900" y="1546">24Vac</text>
+<text x="20" y="1568">GCEC_B1_HVAC_PAC-B1-04</text>
+<text x="320" y="1568">PB-IND</text>
+<text x="600" y="1568">Manual Push Button LED</text>
+<text x="900" y="1568">24Vac</text>
+<text x="20" y="1590">GCEC_B1_HVAC_PAC-B1-04</text>
+<text x="320" y="1590">CW-O</text>
+<text x="600" y="1590">Isolation Valve Command</text>
+<text x="900" y="1590">24Vac</text>
+<text x="20" y="1612">GCEC_B1_AIR_COMP_1</text>
+<text x="320" y="1612">COMP-C</text>
+<text x="600" y="1612">Compressor Command</text>
+<text x="900" y="1612">24Vac</text>
+<text x="20" y="1634">GCEC_B1_AIR_COMP_2</text>
+<text x="320" y="1634">COMP-C</text>
+<text x="600" y="1634">Compressor Command</text>
+<text x="900" y="1634">24Vac</text>
+<text x="20" y="1656">GCEC_B1_HVAC_PAC-B1-04</text>
+<text x="320" y="1656">UNIT-C</text>
+<text x="600" y="1656">Fan High Speed</text>
+<text x="900" y="1656">24Vac</text>
+<text x="20" y="1678"></text>
+<text x="320" y="1678"></text>
+<text x="600" y="1678"></text>
+<text x="900" y="1678"></text>
+<text x="20" y="1700"></text>
+<text x="320" y="1700"></text>
+<text x="600" y="1700"></text>
+<text x="900" y="1700"></text>
+</svg>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Edit Table {{ table_index }}</title>
+<style>
+    * { box-sizing: border-box; font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+    body { margin: 0; padding: 0; background: #f4f6f9; color: #1f2937; }
+    .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+    h1 { font-size: 24px; margin-bottom: 8px; }
+    .subtitle { color: #6b7280; margin-bottom: 20px; }
+    .card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        padding: 24px;
+        margin-bottom: 24px;
+        overflow-x: auto;
+    }
+    .btn {
+        display: inline-block;
+        background: #2563eb;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.2s ease;
+    }
+    .btn:hover { background: #1e40af; }
+    .btn.success { background: #16a34a; }
+    .btn.success:hover { background: #15803d; }
+    .btn.danger { background: #dc2626; }
+    .btn.danger:hover { background: #b91c1c; }
+    .btn.secondary { background: #6b7280; }
+    .btn.secondary:hover { background: #4b5563; }
+    .back { margin-bottom: 20px; }
+    .back a { color: #2563eb; text-decoration: none; font-size: 14px; }
+    .back a:hover { text-decoration: underline; }
+    table.edit-grid { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table.edit-grid th, table.edit-grid td { border: 1px solid #d1d5db; padding: 8px 10px; text-align: left; }
+    table.edit-grid th { background: #f3f4f6; font-weight: 600; white-space: nowrap; }
+    table.edit-grid input { width: 100%; padding: 6px 8px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 13px; }
+    table.edit-grid input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 2px rgba(37,99,235,0.2); }
+    table.edit-grid tr:hover td { background: #f9fafb; }
+    .col-del { width: 44px; text-align: center; }
+    .actions { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .hint { color: #6b7280; font-size: 13px; margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="back">
+        <a href="{{ url_for('step1') }}">← Back to tables</a>
+    </div>
+
+    <h1>Edit Table {{ table_index }}</h1>
+    <p class="subtitle">Change any value below. Save to update this table; then use Merge Dashboard to generate the drawing.</p>
+
+    <div class="card">
+        <form method="post" action="{{ url_for('edit_table', table_id=table_id) }}" id="editForm">
+            <table class="edit-grid">
+                <thead>
+                    <tr>
+                        <th class="col-del" title="Delete row"></th>
+                        <th>POINT</th>
+                        <th>SYSTEM</th>
+                        <th>OBJECT</th>
+                        <th>DESCRIPTION</th>
+                        <th>SIGNAL</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    {% for idx, row in df.iterrows() %}
+                    <tr>
+                        <td class="col-del"><button type="button" class="btn danger" style="padding:4px 8px;font-size:12px;" onclick="deleteRow(this)" title="Delete row">×</button></td>
+                        <td><input type="text" name="data_{{ loop.index0 }}_POINT" value="{{ row['POINT'] }}" placeholder="e.g. BO1"></td>
+                        <td><input type="text" name="data_{{ loop.index0 }}_SYSTEM" value="{{ row['SYSTEM'] }}" placeholder="System"></td>
+                        <td><input type="text" name="data_{{ loop.index0 }}_OBJECT" value="{{ row['OBJECT'] }}" placeholder="Object"></td>
+                        <td><input type="text" name="data_{{ loop.index0 }}_DESCRIPTION" value="{{ row['DESCRIPTION'] }}" placeholder="Description"></td>
+                        <td><input type="text" name="data_{{ loop.index0 }}_SIGNAL" value="{{ row['SIGNAL'] }}" placeholder="e.g. 24Vac, 0-10Vdc"></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p class="hint">Add rows with the button below if needed. Empty rows are ignored when saving.</p>
+            <div class="actions">
+                <button type="button" class="btn secondary" onclick="addRow()">+ Add row</button>
+                <button type="submit" class="btn success">Save changes</button>
+                <a href="{{ url_for('step1') }}" class="btn secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+var rowCount = {{ df|length }};
+var cols = ["POINT", "SYSTEM", "OBJECT", "DESCRIPTION", "SIGNAL"];
+
+function addRow() {
+    var tbody = document.getElementById("tbody");
+    var tr = document.createElement("tr");
+    tr.innerHTML =
+        '<td class="col-del"><button type="button" class="btn danger" style="padding:4px 8px;font-size:12px;" onclick="deleteRow(this)" title="Delete row">×</button></td>' +
+        cols.map(function(c) {
+            return '<td><input type="text" name="data_' + rowCount + '_' + c + '" placeholder=""></td>';
+        }).join("");
+    tbody.appendChild(tr);
+    rowCount++;
+}
+
+function deleteRow(btn) {
+    var tr = btn.closest("tr");
+    if (document.getElementById("tbody").rows.length <= 1) return;
+    tr.remove();
+}
+
+function reindexRows() {
+    var tbody = document.getElementById("tbody");
+    var rows = tbody.querySelectorAll("tr");
+    rows.forEach(function(tr, i) {
+        tr.querySelectorAll("input").forEach(function(inp) {
+            var name = inp.name;
+            var col = name.split("_").pop();
+            inp.name = "data_" + i + "_" + col;
+        });
+    });
+    rowCount = rows.length;
+}
+
+document.getElementById("editForm").addEventListener("submit", function() {
+    reindexRows();
+});
+</script>
+
+</body>
+</html>

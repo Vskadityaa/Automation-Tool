@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Merge Table Into Drawing</title>
+<style>
+    * { box-sizing: border-box; font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+    body { margin: 0; padding: 0; background: #f4f6f9; color: #1f2937; }
+    .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    h1 { font-size: 26px; margin-bottom: 8px; }
+    .subtitle { color: #6b7280; margin-bottom: 28px; }
+    .card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+    .card h2 {
+        font-size: 18px;
+        margin-bottom: 14px;
+        border-left: 4px solid #2563eb;
+        padding-left: 10px;
+    }
+    label { font-size: 14px; font-weight: 600; margin-bottom: 6px; display: block; }
+    select { padding: 10px 12px; border-radius: 6px; border: 1px solid #d1d5db; font-size: 14px; background: #fff; }
+    .btn {
+        display: inline-block;
+        background: #16a34a;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+    .btn:hover { background: #15803d; }
+    .btn.secondary { background: #6b7280; }
+    .btn.secondary:hover { background: #4b5563; }
+    .back { margin-bottom: 20px; }
+    .back a { color: #2563eb; text-decoration: none; font-size: 14px; }
+    .back a:hover { text-decoration: underline; }
+    .hint { color: #6b7280; font-size: 13px; margin-bottom: 12px; }
+    footer { text-align: center; color: #9ca3af; font-size: 13px; margin-top: 32px; }
+
+    /* Table → SVG → Generate rows */
+    .merge-rows { margin: 0; padding: 0; list-style: none; }
+    .merge-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 16px;
+        border-bottom: 1px solid #e5e7eb;
+        flex-wrap: wrap;
+    }
+    .merge-row:last-child { border-bottom: none; }
+    .merge-row:nth-child(even) { background: #f9fafb; }
+    .merge-row .col-table { font-weight: 600; min-width: 90px; }
+    .merge-row .col-svg { flex: 1; min-width: 200px; }
+    .merge-row .col-svg select { width: 100%; max-width: 320px; }
+    .merge-row .col-filename { min-width: 140px; }
+    .merge-row .col-filename input { width: 100%; max-width: 180px; padding: 6px 10px; border-radius: 6px; border: 1px solid #d1d5db; font-size: 13px; }
+    .merge-row .col-gen { flex-shrink: 0; }
+    .merge-row form { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; flex: 1; }
+    .merge-row form .col-table { min-width: 90px; font-weight: 600; }
+    .merge-row form .col-svg { flex: 1; min-width: 200px; }
+    .merge-row form .col-svg select { width: 100%; max-width: 320px; }
+    .no-tables { padding: 24px; text-align: center; color: #6b7280; }
+    .no-tables a { color: #2563eb; }
+    .point-label-note { font-size: 12px; color: #6b7280; margin-top: 8px; }
+    input[type="file"] { padding: 8px; border-radius: 6px; border: 1px solid #d1d5db; }
+    .sr-only { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="back">
+        <a href="{{ url_for('step1') }}">← Back to Excel tables</a>
+    </div>
+
+    <h1>Merge Table Into Drawing</h1>
+    <p class="subtitle">
+        For each table: select an SVG template, then click Generate. Point labels: <strong>OBJECT</strong> (left) and <strong>DESCRIPTION</strong> (right).
+    </p>
+
+    <div class="card">
+        <h2>Table → Select SVG template → Generate</h2>
+
+        {% if table_ids %}
+        <ul class="merge-rows">
+            {% for tid in table_ids %}
+            <li class="merge-row">
+                <form action="{{ url_for('merge_final') }}" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="table_source" value="selected">
+                    <input type="hidden" name="table_id" value="{{ tid }}">
+                    <input type="hidden" name="svg_source" value="template">
+                    <input type="hidden" name="point_column" value="POINT">
+                    <input type="hidden" name="left_column" value="OBJECT">
+                    <input type="hidden" name="right_column" value="DESCRIPTION">
+                    <input type="hidden" name="display_column" value="">
+
+                    <span class="col-table">Table {{ loop.index }} <a href="{{ url_for('edit_table', table_id=tid, table_index=loop.index) }}" style="font-size:12px; margin-left:6px;">Edit</a></span>
+                    <span class="col-svg">
+                        <label for="svg_template_{{ tid }}" class="sr-only">SVG template</label>
+                        <select name="svg_template" id="svg_template_{{ tid }}" required>
+                            <option value="">— Choose SVG template —</option>
+                            {% for filename, display_name in svg_templates %}
+                            <option value="{{ filename }}">{{ display_name }}</option>
+                            {% endfor %}
+                            {% if not svg_templates %}
+                            <option value="">No templates saved — save one below</option>
+                            {% endif %}
+                        </select>
+                    </span>
+                    <span class="col-filename">
+                        <label for="out_name_{{ tid }}" class="sr-only">Output file name</label>
+                        <input type="text" name="output_filename" id="out_name_{{ tid }}" placeholder="e.g. drawing.svg" value="final_output.svg">
+                    </span>
+                    <span class="col-gen">
+                        <button type="submit" class="btn">Generate</button>
+                    </span>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        <p class="point-label-note">Point label is fixed: left = OBJECT, right = DESCRIPTION (same as your merge UI).</p>
+        {% else %}
+        <div class="no-tables">
+            <p>No tables yet. Upload an Excel file on the previous step to create Table 1, 2, 3…</p>
+            <a href="{{ url_for('step1') }}">Go to Excel tables →</a>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <h2>Or: upload new Excel + SVG for one-time merge</h2>
+        <p class="hint">Select a table from dropdown or upload new Excel; upload SVG or choose template; then generate. Point labels: OBJECT (left), DESCRIPTION (right).</p>
+        <form action="{{ url_for('merge_final') }}" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="point_column" value="POINT">
+            <input type="hidden" name="left_column" value="OBJECT">
+            <input type="hidden" name="right_column" value="DESCRIPTION">
+            <input type="hidden" name="display_column" value="">
+
+            <div style="margin-bottom:14px;">
+                <label>Table source</label>
+                <select name="table_source" id="table_source">
+                    <option value="upload">Upload new Excel</option>
+                    {% if table_ids %}
+                    <option value="selected">Select from extracted tables</option>
+                    {% endif %}
+                </select>
+            </div>
+            <div id="upload_excel_box" style="margin-bottom:14px;">
+                <label for="excel_file">Excel file</label>
+                <input type="file" name="excel_file" id="excel_file" accept=".xlsx,.xls">
+            </div>
+            <div id="select_table_box" style="display:none; margin-bottom:14px;">
+                <label for="table_id">Select table</label>
+                <select name="table_id" id="table_id">
+                    {% for tid in table_ids %}
+                    <option value="{{ tid }}">Table {{ loop.index }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div style="margin-bottom:14px;">
+                <label>SVG</label>
+                <div style="margin-bottom:8px;">
+                    <input type="radio" name="svg_source" id="svg_upload" value="upload" checked>
+                    <label for="svg_upload" style="display:inline; font-weight:500;">Upload SVG</label>
+                </div>
+                <div id="svg_upload_opt" style="margin-left:20px; margin-bottom:8px;">
+                    <input type="file" name="svg_file" id="svg_file" accept=".svg">
+                </div>
+                <div>
+                    <input type="radio" name="svg_source" id="svg_template_one" value="template">
+                    <label for="svg_template_one" style="display:inline; font-weight:500;">Saved template</label>
+                </div>
+                <div id="svg_template_opt" style="margin-left:20px; display:none;">
+                    <select name="svg_template" id="svg_template_select">
+                        <option value="">— Choose template —</option>
+                        {% for filename, display_name in svg_templates %}
+                        <option value="{{ filename }}">{{ display_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div style="margin-bottom:14px;">
+                <label for="output_filename_final">Output file name</label>
+                <input type="text" name="output_filename" id="output_filename_final" placeholder="e.g. my_drawing.svg" value="final_output.svg" style="width:100%; max-width:280px; padding:10px 12px; border-radius:6px; border:1px solid #d1d5db;">
+            </div>
+            <button type="submit" class="btn">Generate final drawing</button>
+        </form>
+    </div>
+
+    <div class="card" style="background:#f0fdf4;">
+        <h2 style="border-color:#16a34a;">Save SVG as template</h2>
+        <p class="hint">Upload an SVG and give it a name to use in the table list above.</p>
+        <form action="{{ url_for('save_svg_template') }}" method="post" enctype="multipart/form-data" style="margin-top:12px;">
+            <input type="text" name="template_name" placeholder="e.g. Floor 1 drawing" style="width:100%; padding:10px 12px; border-radius:6px; border:1px solid #d1d5db; margin-bottom:10px;" maxlength="80">
+            <input type="file" name="svg_file" accept=".svg" style="margin-bottom:10px;">
+            <button type="submit" class="btn" style="background:#15803d;">Save as template</button>
+        </form>
+    </div>
+
+    <a href="{{ url_for('step1') }}" class="btn secondary">Cancel</a>
+    <footer>BMS Automation Tool · Point match + table merge</footer>
+</div>
+
+<script>
+(function() {
+    var tableSource = document.getElementById("table_source");
+    var uploadExcelBox = document.getElementById("upload_excel_box");
+    var selectTableBox = document.getElementById("select_table_box");
+    var tableIdSelect = document.getElementById("table_id");
+    var excelFile = document.getElementById("excel_file");
+
+    function toggleTableSource() {
+        if (!tableSource) return;
+        var isUpload = tableSource.value === "upload";
+        if (uploadExcelBox) uploadExcelBox.style.display = isUpload ? "block" : "none";
+        if (selectTableBox) selectTableBox.style.display = isUpload ? "none" : "block";
+        if (tableIdSelect) {
+            tableIdSelect.disabled = isUpload;
+            tableIdSelect.removeAttribute("required");
+        }
+        if (excelFile) {
+            excelFile.disabled = !isUpload;
+            if (isUpload) excelFile.setAttribute("required", "required");
+            else excelFile.removeAttribute("required");
+        }
+    }
+    if (tableSource) tableSource.addEventListener("change", toggleTableSource);
+    toggleTableSource();
+
+    var svgUpload = document.getElementById("svg_upload");
+    var svgTemplateOne = document.getElementById("svg_template_one");
+    var svgUploadOpt = document.getElementById("svg_upload_opt");
+    var svgTemplateOpt = document.getElementById("svg_template_opt");
+    var svgFileInput = document.getElementById("svg_file");
+    var svgTemplateSelect = document.getElementById("svg_template_select");
+
+    function toggleSvg() {
+        var useUpload = svgUpload && svgUpload.checked;
+        if (svgUploadOpt) svgUploadOpt.style.display = useUpload ? "block" : "none";
+        if (svgTemplateOpt) svgTemplateOpt.style.display = useUpload ? "none" : "block";
+        if (svgFileInput) {
+            svgFileInput.disabled = !useUpload;
+            if (useUpload) svgFileInput.setAttribute("required", "required");
+            else svgFileInput.removeAttribute("required");
+        }
+        if (svgTemplateSelect) {
+            svgTemplateSelect.disabled = useUpload;
+            if (!useUpload) svgTemplateSelect.setAttribute("required", "required");
+            else svgTemplateSelect.removeAttribute("required");
+        }
+    }
+    if (svgUpload) svgUpload.addEventListener("change", toggleSvg);
+    if (svgTemplateOne) svgTemplateOne.addEventListener("change", toggleSvg);
+    toggleSvg();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<svg width="1150" height="552" xmlns="http://www.w3.org/2000/svg">
+<rect x="10" y="10" width="1130" height="532" fill="none" stroke="black" stroke-width="2"/>
+<text x="20" y="50" font-weight="bold">COL 1</text>
+<text x="300" y="50" font-weight="bold">COL 2</text>
+<text x="580" y="50" font-weight="bold">COL 3</text>
+<text x="860" y="50" font-weight="bold">COL 4</text>
+<text x="20" y="72">Item No.</text>
+<text x="300" y="72">Description</text>
+<text x="580" y="72">Date Raised</text>
+<text x="860" y="72">Action By</text>
+<text x="20" y="94">1</text>
+<text x="300" y="94">Moved OAF-B1-03 points from BMS-B1-01 to BMS-B1-02</text>
+<text x="580" y="94">11.12.24</text>
+<text x="860" y="94">BT</text>
+<text x="20" y="116">2</text>
+<text x="300" y="116">Add Start/Stop to MHP units (BMS-L2-01, BMS-L2-02)</text>
+<text x="580" y="116">12.12.24</text>
+<text x="860" y="116">BT</text>
+<text x="20" y="138">3</text>
+<text x="300" y="138">Delete GEF-L2-03, GEF-L2-07, TEF-R-05 from MSSB-L2-04</text>
+<text x="580" y="138">12.12.24</text>
+<text x="860" y="138">BT</text>
+<text x="20" y="160">4</text>
+<text x="300" y="160">Add GEF-L1-01, GEF-L1-02 to MSSB-L2-04</text>
+<text x="580" y="160">12.12.24</text>
+<text x="860" y="160">BT</text>
+<text x="20" y="182">5</text>
+<text x="300" y="182">Add GEF-L1-03 to BMS-MZ-01</text>
+<text x="580" y="182">12.12.24</text>
+<text x="860" y="182">BT</text>
+<text x="20" y="204">6</text>
+<text x="300" y="204">Delete OAF-L0-02 from BMS-MZ-03</text>
+<text x="580" y="204">13.12.24</text>
+<text x="860" y="204">BT</text>
+<text x="20" y="226">7</text>
+<text x="300" y="226">Change power feed of AHU-L2-06 from MSSB-L2-05 to MSSB-L2-05</text>
+<text x="580" y="226">13.12.24</text>
+<text x="860" y="226">BT</text>
+<text x="20" y="248">8</text>
+<text x="300" y="248">Add Start/Stop BO to all AHUs</text>
+<text x="580" y="248">7.12.24</text>
+<text x="860" y="248">BT</text>
+<text x="20" y="270">9</text>
+<text x="300" y="270">Added outstanding points from latest MSSB schedule</text>
+<text x="580" y="270">12.01.25</text>
+<text x="860" y="270">BT</text>
+<text x="20" y="292">10</text>
+<text x="300" y="292">Deleted CHWS, HWS, CWS tabs</text>
+<text x="580" y="292">14.01.25</text>
+<text x="860" y="292">BT</text>
+<text x="20" y="314">11</text>
+<text x="300" y="314">Zone Pressure sensor selection</text>
+<text x="580" y="314">22.01.25</text>
+<text x="860" y="314"></text>
+<text x="20" y="336">12</text>
+<text x="300" y="336">GEF-L0-03 deleted</text>
+<text x="580" y="336">22.01.25</text>
+<text x="860" y="336">BT</text>
+<text x="20" y="358">13</text>
+<text x="300" y="358">Add Air compressor points </text>
+<text x="580" y="358">22.01.25</text>
+<text x="860" y="358">BT</text>
+<text x="20" y="380">14</text>
+<text x="300" y="380">Updates as per Points list review</text>
+<text x="580" y="380">28.02.25</text>
+<text x="860" y="380">BT</text>
+<text x="20" y="402">15</text>
+<text x="300" y="402">Updates as per Points list review</text>
+<text x="580" y="402">03.04.25</text>
+<text x="860" y="402">DP</text>
+<text x="20" y="424">16</text>
+<text x="300" y="424"></text>
+<text x="580" y="424"></text>
+<text x="860" y="424"></text>
+<text x="20" y="446">17</text>
+<text x="300" y="446"></text>
+<text x="580" y="446"></text>
+<text x="860" y="446"></text>
+<text x="20" y="468">18</text>
+<text x="300" y="468"></text>
+<text x="580" y="468"></text>
+<text x="860" y="468"></text>
+<text x="20" y="490">19</text>
+<text x="300" y="490"></text>
+<text x="580" y="490"></text>
+<text x="860" y="490"></text>
+<text x="20" y="512">20</text>
+<text x="300" y="512"></text>
+<text x="580" y="512"></text>
+<text x="860" y="512"></text>
+</svg>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Open on another PC – BMS Point Tool</title>
+<style>
+    * { box-sizing: border-box; font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+    body { margin: 0; padding: 24px 20px; background: #0f172a; color: #e2e8f0; line-height: 1.6; max-width: 640px; margin-left: auto; margin-right: auto; }
+    h1 { font-size: 20px; color: #f8fafc; margin-bottom: 8px; }
+    h2 { font-size: 16px; color: #94a3b8; margin-top: 24px; margin-bottom: 8px; }
+    p { margin: 0 0 12px 0; color: #cbd5e1; }
+    ul { margin: 8px 0; padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    .box { background: #1e293b; border-radius: 8px; padding: 16px; margin: 16px 0; border-left: 4px solid #2563eb; }
+    .box.warn { border-left-color: #dc2626; }
+    .box.ok { border-left-color: #16a34a; }
+    .link { font-family: monospace; background: #334155; padding: 8px 12px; border-radius: 6px; display: inline-block; margin: 8px 0; word-break: break-all; color: #38bdf8; }
+    a { color: #38bdf8; }
+    a:hover { text-decoration: underline; }
+    .back { display: inline-block; margin-top: 24px; color: #94a3b8; font-size: 14px; }
+</style>
+</head>
+<body>
+<h1>Why the link doesn’t open on the other PC</h1>
+<p>Usually one of these:</p>
+<ul>
+    <li><strong>Windows Firewall</strong> on this PC is blocking the connection.</li>
+    <li>The other PC is using the wrong address (e.g. localhost instead of your IP).</li>
+    <li>The two PCs are not on the same WiFi/LAN.</li>
+</ul>
+
+<h2>Fix 1 – Same network (app runs on your PC)</h2>
+<div class="box warn">
+    <p><strong>On this PC</strong> (where the app runs):</p>
+    <ol style="margin: 8px 0; padding-left: 24px;">
+        <li>Right‑click <strong>allow_firewall.bat</strong></li>
+        <li>Click <strong>Run as administrator</strong></li>
+        <li>Click Yes, wait until it says “Done”</li>
+        <li>Restart the app (close the server window and run start_server.bat again)</li>
+    </ol>
+    <p><strong>On the other PC:</strong></p>
+    <ul>
+        <li>Open the <strong>address bar</strong> (where you type URLs), not the search box.</li>
+        <li>Type or paste the <strong>full</strong> link including <strong>http://</strong> (e.g. http://192.168.1.90:6001).</li>
+        <li>If you type without http://, the browser may search instead of open the app.</li>
+        <li>If the page only loads forever (spinning): run allow_firewall.bat as Administrator on this PC.</li>
+    </ul>
+    <p>Both PCs must be on the same WiFi.</p>
+    {% if links %}
+    <p>Copy one of these and paste in the address bar on the other PC:</p>
+    {% for link in links %}
+    <span class="link">{{ link }}</span><br>
+    {% endfor %}
+    {% else %}
+    <p>Run <strong>ipconfig</strong> on this PC to get your IPv4, then on the other PC open: <strong>http://&lt;your IPv4&gt;:{{ port }}</strong></p>
+    {% endif %}
+</div>
+
+<h2>Fix 2 – Host online (recommended if other PC only reloads / won’t open)</h2>
+<div class="box ok">
+    <p>If the other PC only reloads or never opens the app, the most reliable fix is to <strong>host the app online</strong>. You get a normal URL that works from any PC – no firewall, no same network, no reload issues.</p>
+    <p><strong>Render.com (free):</strong></p>
+    <ol style="margin: 8px 0; padding-left: 24px;">
+        <li>Push this project to GitHub (see PUSH_TO_GITHUB.md).</li>
+        <li>Go to <a href="https://render.com" target="_blank" rel="noopener">render.com</a> → Sign up → <strong>New</strong> → <strong>Web Service</strong>.</li>
+        <li>Connect your GitHub repo and select this project.</li>
+        <li>Build: <code>pip install -r requirements.txt</code></li>
+        <li>Start: <code>gunicorn app:app --bind 0.0.0.0:$PORT</code></li>
+        <li>Click Create. When done, you get a URL like <code>https://bms-point-tool-xxx.onrender.com</code>. Open it on any PC – it works.</li>
+    </ol>
+    <p>Full steps are in <strong>DEPLOY.md</strong> in the project folder.</p>
+</div>
+
+<a href="{{ url_for('running_link') }}" class="back">← Back to shareable link</a> &nbsp; <a href="{{ url_for('step1') }}" class="back">← Back to app</a>
+</body>
+</html>

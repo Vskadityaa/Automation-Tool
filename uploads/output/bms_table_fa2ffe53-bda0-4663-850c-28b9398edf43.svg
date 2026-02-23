@@ -1,0 +1,15 @@
+<svg width="1200" height="134" xmlns="http://www.w3.org/2000/svg">
+<rect x="10" y="10" width="1180" height="114" fill="none" stroke="black" stroke-width="2"/>
+<text x="20" y="50" font-weight="bold">SYSTEM</text>
+<text x="320" y="50" font-weight="bold">OBJECT</text>
+<text x="600" y="50" font-weight="bold">DESCRIPTION</text>
+<text x="900" y="50" font-weight="bold">SIGNAL</text>
+<text x="20" y="72">11.12.24</text>
+<text x="320" y="72">BT</text>
+<text x="600" y="72">11.12.24</text>
+<text x="900" y="72">Closed</text>
+<text x="20" y="94">13.12.24</text>
+<text x="320" y="94">BT</text>
+<text x="600" y="94">10.01.25</text>
+<text x="900" y="94">Closed</text>
+</svg>

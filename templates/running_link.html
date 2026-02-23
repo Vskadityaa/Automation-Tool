@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Final running link – BMS Point Tool</title>
+<style>
+    * { box-sizing: border-box; font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+    body { margin: 0; padding: 40px 20px; background: #0f172a; color: #e2e8f0; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .card { background: #1e293b; border-radius: 12px; padding: 32px; max-width: 560px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+    h1 { font-size: 22px; margin: 0 0 8px 0; color: #f8fafc; }
+    .sub { color: #94a3b8; font-size: 14px; margin-bottom: 24px; }
+    .label { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .url { background: #0f172a; border: 2px solid #334155; border-radius: 8px; padding: 14px 16px; font-size: 18px; font-family: monospace; word-break: break-all; color: #38bdf8; margin-bottom: 20px; }
+    .url.final { border-color: #22c55e; color: #4ade80; font-size: 20px; font-weight: 600; }
+    .copy { background: #2563eb; color: #fff; border: none; padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; }
+    .copy:hover { background: #1d4ed8; }
+    .copy.done { background: #22c55e; }
+    .back { display: inline-block; margin-top: 20px; color: #38bdf8; text-decoration: none; font-size: 14px; }
+    .back:hover { text-decoration: underline; }
+    .tip { background: #334155; border-left: 4px solid #f59e0b; padding: 12px 16px; margin-top: 20px; font-size: 13px; border-radius: 0 8px 8px 0; }
+</style>
+</head>
+<body>
+<div class="card">
+    <h1>{% if hosted_online %}App URL{% else %}Final running link{% endif %}</h1>
+    {% if hosted_online %}
+    <p class="sub">App is hosted online. Share this link with anyone to open the app.</p>
+    <div class="label">App URL (share with anyone)</div>
+    <div class="url final" id="final-link">{{ link_app_url }}</div>
+    <button type="button" class="copy" id="copy-btn" onclick="copyLink()">Copy link</button>
+    {% else %}
+    <p class="sub">Use this link to open the app from this PC or from another PC on the same network.</p>
+
+    {% if link_public %}
+    <div class="label">Public link – open from any PC (no same network needed)</div>
+    <div class="url final" id="final-link">{{ link_public }}</div>
+    <button type="button" class="copy" id="copy-btn" onclick="copyLink()">Copy link</button>
+    <p class="sub" style="margin-top:12px; margin-bottom:0;">Share this link. On the other PC, if an ngrok page appears, click <strong>Visit Site</strong> to open the app.</p>
+    <div class="label" style="margin-top:24px;">Link for this PC only</div>
+    <div class="url">{{ link_local }}</div>
+    {% elif links_other %}
+    <div class="label">Links for other PCs (same WiFi/LAN) – try each if one fails</div>
+    <div class="url final" id="final-link">{{ links_other[0] }}</div>
+    {% for link in links_other[1:] %}
+    <div class="url" style="margin-top:8px;">{{ link }}</div>
+    {% endfor %}
+    <button type="button" class="copy" id="copy-btn" onclick="copyLink()">Copy first link</button>
+    <p class="sub" style="margin-top:16px; margin-bottom:0;">If none open: right‑click <strong>allow_firewall.bat</strong> → Run as administrator on this PC.</p>
+    {% elif link_other %}
+    <div class="label">Link for other PCs (same network)</div>
+    <div class="url final" id="final-link">{{ link_other }}</div>
+    <button type="button" class="copy" id="copy-btn" onclick="copyLink()">Copy link</button>
+    <p class="sub" style="margin-top:16px; margin-bottom:0;">Give this link to anyone on your WiFi/LAN. Run <strong>allow_firewall.bat</strong> (as Admin) once if they can’t open it.</p>
+    {% else %}
+    <div class="label">Link for this PC</div>
+    <div class="url" id="final-link">{{ link_local }}</div>
+    <p class="sub">Run <strong>ipconfig</strong> to get this PC’s IPv4, then use: http://&lt;IPv4&gt;:{{ port }}</p>
+    {% endif %}
+
+    {% if not link_public %}
+    <div class="label" style="margin-top:24px;">Link for this PC only</div>
+    <div class="url">{{ link_local }}</div>
+    {% endif %}
+
+    <div class="tip" style="border-left-color: #dc2626; background: #3f1d1d;"><strong>Link does NOT open on the other PC?</strong><br>• On the other PC: paste the link in the <strong>address bar</strong> (not in search). Use the <strong>full</strong> link including <strong>http://</strong> – otherwise the browser may only search and not open the app.<br>• If it only loads forever: on <strong>this PC</strong> right‑click <strong>allow_firewall.bat</strong> → Run as administrator.<br>• <a href="{{ url_for('open_on_other_pc_help') }}" style="color:#fbbf24;">Full help</a> · Host online: DEPLOY.md</div>
+    <div class="tip" style="border-left-color: #22c55e;"><strong>Easiest: host online.</strong> Deploy to Render.com (free) – you get a URL that opens from any PC, no firewall. See <strong>DEPLOY.md</strong>. Or use <strong>Host for other PCs.bat</strong> (needs free ngrok token) to get a shareable link.</div>
+    {% endif %}
+
+    <a href="{{ url_for('step1') }}" class="back">← Back to app</a>
+</div>
+<script>
+function copyLink() {
+    var el = document.getElementById('final-link');
+    var text = el.textContent.trim();
+    navigator.clipboard.writeText(text).then(function() {
+        var btn = document.getElementById('copy-btn');
+        btn.textContent = 'Copied!';
+        btn.classList.add('done');
+        setTimeout(function() { btn.textContent = 'Copy link'; btn.classList.remove('done'); }, 2000);
+    });
+}
+</script>
+</body>
+</html>

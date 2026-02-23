@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BMS Table Extractor</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #f4f6f9;
+        color: #1f2937;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        color: #6b7280;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        padding: 24px;
+        margin-bottom: 30px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+        border-left: 4px solid #2563eb;
+        padding-left: 10px;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: block;
+    }
+
+    input[type="file"],
+    input[type="number"],
+    input[type="text"] {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: 1px solid #d1d5db;
+        font-size: 14px;
+        background: #fff;
+    }
+
+    input::placeholder {
+        color: #9ca3af;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #2563eb;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 22px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+        background: #1e40af;
+    }
+
+    .btn.secondary {
+        background: #16a34a;
+    }
+
+    .btn.secondary:hover {
+        background: #166534;
+    }
+
+    .preview-box {
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        padding: 12px;
+        background: #fafafa;
+        overflow: auto;
+        max-height: 70vh;
+        max-width: 100%;
+    }
+    .preview-box object {
+        display: block;
+        min-width: 100%;
+    }
+
+    .preview-title {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .divider {
+        height: 1px;
+        background: #e5e7eb;
+        margin: 30px 0;
+    }
+
+    footer {
+        text-align: center;
+        color: #9ca3af;
+        font-size: 13px;
+        margin-top: 40px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>BMS Excel → Drawing Automation Tool</h1>
+    <div class="subtitle">
+        Extract model-based point tables from Excel and merge them directly into Visio SVG drawings
+        &nbsp; · &nbsp; <a href="{{ url_for('running_link') }}" style="color:#2563eb;">Get shareable link</a>
+    </div>
+    {% if upload_error == 'upload' %}
+    <p style="color:#b91c1c; margin-bottom:16px;">Please choose an Excel file (.xlsx or .xls).</p>
+    {% elif upload_error == 'excel' %}
+    <p style="color:#b91c1c; margin-bottom:16px;">Could not read the Excel file. Check the file and sheet number.</p>
+    {% endif %}
+
+    <!-- ================= STEP 1 ================= -->
+    <div class="card">
+        <h2>STEP 1 – Excel → Verify Tables</h2>
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-grid">
+                <div>
+                    <label>Excel File</label>
+                    <input type="file" name="excel" required>
+                </div>
+
+                <div>
+                    <label>Sheet Number</label>
+                    <input type="number" name="sheet" value="0">
+                </div>
+            </div>
+
+            <button class="btn" type="submit">
+                Create Table Previews
+            </button>
+        </form>
+    </div>
+
+    {% if table_ids %}
+    <div class="card" style="border: 2px solid #16a34a;">
+        <h2>Merge any table into drawing</h2>
+        <p style="margin-bottom:14px;">Open the merge dashboard to select Table 1, 2, 3… or upload a new Excel, then upload your SVG. Same process: point names detected and final drawing with table generated.</p>
+        <a href="{{ url_for('merge_dashboard') }}" class="btn secondary">Open Merge Dashboard →</a>
+    </div>
+    <div class="divider"></div>
+
+        {% for tid in table_ids %}
+
+        <!-- ================= PREVIEW ================= -->
+        <div class="card">
+            <h2>Table {{ loop.index }}</h2>
+
+            <div class="preview-title" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+                <span>Extracted model table {{ loop.index }}</span>
+                <a href="{{ url_for('edit_table', table_id=tid, table_index=loop.index) }}" class="btn" style="padding:8px 16px; font-size:13px; text-decoration:none;">Edit table</a>
+            </div>
+
+            <div class="preview-box" title="Scroll to see all data">
+                <object
+                    type="image/svg+xml"
+                    data="/preview/{{ tid }}{% if preview_refresh %}?t={{ preview_refresh }}{% endif %}"
+                    style="min-height: 400px;">
+                </object>
+            </div>
+            <p class="hint" style="margin-top:8px; color:#6b7280; font-size:13px;">↑ Scroll inside the box above to check all data. Nothing is cut.</p>
+        </div>
+
+        <!-- ================= STEP 2 ================= -->
+        <div class="card">
+            <h2>Merge Table {{ loop.index }} Into Drawing</h2>
+
+            <form action="/merge" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="table_id" value="{{ tid }}">
+
+                <label>Visio SVG Drawing</label>
+                <input type="file" name="drawing" required style="margin-bottom:20px;">
+
+                <button class="btn secondary">
+                    Merge Table Into Drawing
+                </button>
+            </form>
+        </div>
+
+        <div class="divider"></div>
+
+        {% endfor %}
+
+    {% endif %}
+
+    <footer>
+        BMS Automation Tool · Excel → SVG → Visio · Internal Engineering Utility
+    </footer>
+
+</div>
+
+</body>
+</html>

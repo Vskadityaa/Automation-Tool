@@ -1,0 +1,59 @@
+========================================
+  WHY THE LINK DOES NOT OPEN ON OTHER PC
+========================================
+
+Common reasons:
+• Windows Firewall on THIS PC is blocking the connection.
+• The other PC is using the wrong address (e.g. localhost instead of your IP).
+• The two PCs are not on the same WiFi/LAN.
+
+----------------------------------------
+  FIX 1 – Same network (run on your PC)
+----------------------------------------
+
+On the PC where the app runs (this PC):
+
+1. RIGHT-CLICK "allow_firewall.bat"
+2. Click "Run as administrator"
+3. Click Yes if Windows asks
+4. Wait until it says "Done"
+5. Restart the app (close the server window and run start_server.bat again)
+
+On the OTHER PC:
+
+6. Open the browser. In the ADDRESS BAR (where you type URLs – not the search box),
+   paste or type the full link including http:// e.g.:
+   http://192.168.1.90:6001
+   If you type without "http://" the browser may only SEARCH and not open the app.
+
+7. If the page only loads forever (spinning): the firewall is blocking. Go back to step 1
+   and run allow_firewall.bat as Administrator on this PC.
+
+8. Both PCs must be on the same WiFi or same network.
+
+If it still does not open, use Fix 2.
+
+----------------------------------------
+  FIX 2 – Host online (works from any PC)
+----------------------------------------
+
+Then the link works from any PC – no firewall, no same network.
+
+Option A – Render.com (recommended, free):
+1. Push this project to GitHub (see PUSH_TO_GITHUB.md).
+2. Go to https://render.com → New → Web Service.
+3. Connect your GitHub repo.
+4. Build: pip install -r requirements.txt
+   Start: gunicorn app:app --bind 0.0.0.0:$PORT
+5. After deploy you get a URL like https://bms-point-tool-xxx.onrender.com
+6. Share that URL – it opens on any PC.
+
+Option B – From your PC with ngrok:
+1. Get a free token at https://ngrok.com
+2. In CMD run: set NGROK_AUTHTOKEN=your_token
+3. Double-click "Host for other PCs.bat"
+4. Share the link it prints (on other PC click "Visit Site" if asked).
+
+========================================
+  See DEPLOY.md for full steps.
+========================================

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMS Excel → SVG Table</title>
+  <style>
+    body {
+      font-family: Arial;
+      background:#0f172a;
+      color:#e5e7eb;
+      display:flex;
+      justify-content:center;
+    }
+    .card {
+      margin-top:80px;
+      background:#020617;
+      padding:30px;
+      border-radius:14px;
+      width:420px;
+    }
+    input, button {
+      width:100%;
+      margin:10px 0;
+      padding:12px;
+      border-radius:8px;
+      border:none;
+    }
+    button {
+      background:#38bdf8;
+      font-size:16px;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>BMS Excel → SVG</h2>
+  <form action="/generate" method="post" enctype="multipart/form-data">
+    <input type="file" name="excel" required>
+    <input type="number" name="sheet" value="0" placeholder="Sheet number (0 based)">
+    <button type="submit">Generate SVG</button>
+    <form action="/merge-final" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="table_id" value="{{ table_id }}">
+    <label>Upload SVG Drawing</label>
+    <input type="file" name="drawing" required>
+    <button type="submit">Merge</button>
+</form>
+  </form>
+</div>
+
+</body>
+</html>

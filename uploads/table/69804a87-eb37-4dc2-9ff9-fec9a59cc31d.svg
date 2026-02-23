@@ -1,0 +1,10 @@
+<svg width="980" height="62" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="120" height="22" fill="#eee" stroke="black"/>
+<text x="25" y="35" font-weight="bold">TYPE</text>
+<rect x="140" y="20" width="160" height="22" fill="#eee" stroke="black"/>
+<text x="145" y="35" font-weight="bold">POINT</text>
+<rect x="300" y="20" width="460" height="22" fill="#eee" stroke="black"/>
+<text x="305" y="35" font-weight="bold">DESCRIPTION</text>
+<rect x="760" y="20" width="180" height="22" fill="#eee" stroke="black"/>
+<text x="765" y="35" font-weight="bold">TYPE</text>
+</svg>

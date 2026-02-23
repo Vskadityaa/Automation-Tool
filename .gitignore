@@ -1,0 +1,23 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.so
+.env
+.venv
+env/
+
+# User uploads (created at runtime; don't push)
+uploads/excel/
+uploads/drawing/
+uploads/temp/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

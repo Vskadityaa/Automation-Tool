@@ -1,0 +1,607 @@
+<svg width="1200" height="1946" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="40" width="240" height="24" fill="#e5e7eb" stroke="black"/>
+<text x="24" y="54" font-weight="bold">SYSTEM</text>
+<rect x="260" y="40" width="260" height="24" fill="#e5e7eb" stroke="black"/>
+<text x="264" y="54" font-weight="bold">OBJECT</text>
+<rect x="520" y="40" width="360" height="24" fill="#e5e7eb" stroke="black"/>
+<text x="524" y="54" font-weight="bold">DESCRIPTION</text>
+<rect x="900" y="40" width="260" height="24" fill="#e5e7eb" stroke="black"/>
+<text x="904" y="54" font-weight="bold">SIGNAL</text>
+<rect x="20" y="64" width="240" height="42" fill="white" stroke="black"/>
+<text x="24" y="78" font-size="12"></text>
+<rect x="260" y="64" width="260" height="42" fill="white" stroke="black"/>
+<text x="264" y="78" font-size="12">refer to system schedule</text>
+<rect x="520" y="64" width="360" height="42" fill="white" stroke="black"/>
+<text x="524" y="78" font-size="12"></text>
+<rect x="900" y="64" width="260" height="42" fill="white" stroke="black"/>
+<text x="904" y="78" font-size="12">CSF-B1-01,</text>
+<text x="904" y="96" font-size="12">CSF-B1-02, CSF-B1-04</text>
+<rect x="20" y="106" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="120" font-size="12">GCEC_B1_HVAC_CSF-B1-04</text>
+<rect x="260" y="106" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="120" font-size="12">SF4-DP</text>
+<rect x="520" y="106" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="120" font-size="12">Supply Fan 4 Differential Pressure</text>
+<rect x="900" y="106" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="120" font-size="12">0-10Vdc</text>
+<rect x="20" y="130" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="144" font-size="12">GCEC_B1_HVAC_CSF-B1-01</text>
+<rect x="260" y="130" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="144" font-size="12">ZN-CO1</text>
+<rect x="520" y="130" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="144" font-size="12">Zone CO 1</text>
+<rect x="900" y="130" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="144" font-size="12">0-10Vdc</text>
+<rect x="20" y="154" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="168" font-size="12">GCEC_B1_HVAC_CSF-B1-01</text>
+<rect x="260" y="154" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="168" font-size="12">ZN-CO2</text>
+<rect x="520" y="154" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="168" font-size="12">Zone CO 2</text>
+<rect x="900" y="154" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="168" font-size="12">0-10Vdc</text>
+<rect x="20" y="178" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="192" font-size="12">GCEC_B1_HVAC_CSF-B1-01</text>
+<rect x="260" y="178" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="192" font-size="12">ZN-CO3</text>
+<rect x="520" y="178" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="192" font-size="12">Zone CO 3</text>
+<rect x="900" y="178" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="192" font-size="12">0-10Vdc</text>
+<rect x="20" y="202" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="216" font-size="12">GCEC_B1_HVAC_CSF-B1-01</text>
+<rect x="260" y="202" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="216" font-size="12">ZN-CO4</text>
+<rect x="520" y="202" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="216" font-size="12">Zone CO 4</text>
+<rect x="900" y="202" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="216" font-size="12">0-10Vdc</text>
+<rect x="20" y="226" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="240" font-size="12">GCEC_B1_HVAC_CSF-B1-01</text>
+<rect x="260" y="226" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="240" font-size="12">ZN-CO5</text>
+<rect x="520" y="226" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="240" font-size="12">Zone CO 5</text>
+<rect x="900" y="226" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="240" font-size="12">0-10Vdc</text>
+<rect x="20" y="250" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="264" font-size="12">GCEC_B1_HVAC_CSF-B1-04</text>
+<rect x="260" y="250" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="264" font-size="12">SF4-S</text>
+<rect x="520" y="250" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="264" font-size="12">Supply Fan 4 Status</text>
+<rect x="900" y="250" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="264" font-size="12">VFC</text>
+<rect x="20" y="274" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="288" font-size="12">GCEC_B1_HVAC_CSF-B1-01</text>
+<rect x="260" y="274" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="288" font-size="12">SF1-S</text>
+<rect x="520" y="274" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="288" font-size="12">Supply Fan 1 Status</text>
+<rect x="900" y="274" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="288" font-size="12">VFC</text>
+<rect x="20" y="298" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="312" font-size="12"></text>
+<rect x="260" y="298" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="312" font-size="12"></text>
+<rect x="520" y="298" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="312" font-size="12"></text>
+<rect x="900" y="298" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="312" font-size="12"></text>
+<rect x="20" y="322" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="336" font-size="12">GCEC_B1_HVAC_CSF-B1-01</text>
+<rect x="260" y="322" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="336" font-size="12">SF1-C</text>
+<rect x="520" y="322" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="336" font-size="12">Supply Fan 1 Command</text>
+<rect x="900" y="322" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="336" font-size="12">24Vac</text>
+<rect x="20" y="346" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="360" font-size="12">GCEC_B1_HVAC_CSF-B1-02</text>
+<rect x="260" y="346" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="360" font-size="12">SF2-C</text>
+<rect x="520" y="346" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="360" font-size="12">Supply Fan 2 Command</text>
+<rect x="900" y="346" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="360" font-size="12">24Vac</text>
+<rect x="20" y="370" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="384" font-size="12">GCEC_B1_HVAC_CSF-B1-04</text>
+<rect x="260" y="370" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="384" font-size="12">SF4-C</text>
+<rect x="520" y="370" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="384" font-size="12">Supply Fan 4 Command</text>
+<rect x="900" y="370" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="384" font-size="12">24Vac</text>
+<rect x="20" y="394" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="408" font-size="12"></text>
+<rect x="260" y="394" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="408" font-size="12"></text>
+<rect x="520" y="394" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="408" font-size="12"></text>
+<rect x="900" y="394" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="408" font-size="12"></text>
+<rect x="20" y="418" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="432" font-size="12"></text>
+<rect x="260" y="418" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="432" font-size="12"></text>
+<rect x="520" y="418" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="432" font-size="12"></text>
+<rect x="900" y="418" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="432" font-size="12"></text>
+<rect x="20" y="442" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="456" font-size="12"></text>
+<rect x="260" y="442" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="456" font-size="12"></text>
+<rect x="520" y="442" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="456" font-size="12"></text>
+<rect x="900" y="442" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="456" font-size="12"></text>
+<rect x="20" y="466" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="480" font-size="12">GCEC_B1_HVAC_CSF-B1-04</text>
+<rect x="260" y="466" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="480" font-size="12">SF4-O</text>
+<rect x="520" y="466" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="480" font-size="12">Supply Fan 4 Speed</text>
+<rect x="900" y="466" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="480" font-size="12">0-10Vdc</text>
+<rect x="20" y="490" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="504" font-size="12">GCEC_B1_HVAC_CSF-B1-01</text>
+<rect x="260" y="490" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="504" font-size="12">SF1-O</text>
+<rect x="520" y="490" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="504" font-size="12">Supply Fan 1 Speed</text>
+<rect x="900" y="490" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="504" font-size="12">0-10Vdc</text>
+<rect x="20" y="514" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="528" font-size="12">GCEC_B1_HVAC_CSF-B1-02</text>
+<rect x="260" y="514" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="528" font-size="12">SF2-O</text>
+<rect x="520" y="514" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="528" font-size="12">Supply Fan 2 Speed</text>
+<rect x="900" y="514" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="528" font-size="12">0-10Vdc</text>
+<rect x="20" y="538" width="240" height="42" fill="white" stroke="black"/>
+<text x="24" y="552" font-size="12"></text>
+<rect x="260" y="538" width="260" height="42" fill="white" stroke="black"/>
+<text x="264" y="552" font-size="12">refer to system schedule</text>
+<rect x="520" y="538" width="360" height="42" fill="white" stroke="black"/>
+<text x="524" y="552" font-size="12"></text>
+<rect x="900" y="538" width="260" height="42" fill="white" stroke="black"/>
+<text x="904" y="552" font-size="12">JF-B1-01/02/03,</text>
+<text x="904" y="570" font-size="12">CSF-B1-02</text>
+<rect x="20" y="580" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="594" font-size="12">GCEC_B1_HVAC_CSF-B1-02</text>
+<rect x="260" y="580" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="594" font-size="12">ZN-CO6</text>
+<rect x="520" y="580" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="594" font-size="12">Zone CO 6</text>
+<rect x="900" y="580" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="594" font-size="12">0-10Vdc</text>
+<rect x="20" y="604" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="618" font-size="12">GCEC_B1_HVAC_CSF-B1-02</text>
+<rect x="260" y="604" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="618" font-size="12">ZN-CO7</text>
+<rect x="520" y="604" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="618" font-size="12">Zone CO 7</text>
+<rect x="900" y="604" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="618" font-size="12">0-10Vdc</text>
+<rect x="20" y="628" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="642" font-size="12">GCEC_B1_HVAC_CSF-B1-02</text>
+<rect x="260" y="628" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="642" font-size="12">ZN-CO8</text>
+<rect x="520" y="628" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="642" font-size="12">Zone CO 8</text>
+<rect x="900" y="628" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="642" font-size="12">0-10Vdc</text>
+<rect x="20" y="652" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="666" font-size="12">GCEC_B1_HVAC_CSF-B1-02</text>
+<rect x="260" y="652" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="666" font-size="12">ZN-CO9</text>
+<rect x="520" y="652" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="666" font-size="12">Zone CO 9</text>
+<rect x="900" y="652" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="666" font-size="12">0-10Vdc</text>
+<rect x="20" y="676" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="690" font-size="12">GCEC_B1_HVAC_CSF-B1-02</text>
+<rect x="260" y="676" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="690" font-size="12">ZN-CO10</text>
+<rect x="520" y="676" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="690" font-size="12">Zone CO 10</text>
+<rect x="900" y="676" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="690" font-size="12">0-10Vdc</text>
+<rect x="20" y="700" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="714" font-size="12">GCEC_B1_HVAC_CSF-B1-02</text>
+<rect x="260" y="700" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="714" font-size="12">SF2-A</text>
+<rect x="520" y="700" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="714" font-size="12">Supply Fan 2 Fault</text>
+<rect x="900" y="700" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="714" font-size="12">VFC</text>
+<rect x="20" y="724" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="738" font-size="12">GCEC_B1_HVAC_JF-B1-01</text>
+<rect x="260" y="724" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="738" font-size="12">JF1-S</text>
+<rect x="520" y="724" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="738" font-size="12">Jet Fan 1 Status</text>
+<rect x="900" y="724" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="738" font-size="12">VFC</text>
+<rect x="20" y="748" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="762" font-size="12">GCEC_B1_HVAC_JF-B1-02</text>
+<rect x="260" y="748" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="762" font-size="12">JF2-S</text>
+<rect x="520" y="748" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="762" font-size="12">Jet Fan 2 Status</text>
+<rect x="900" y="748" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="762" font-size="12">VFC</text>
+<rect x="20" y="772" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="786" font-size="12">GCEC_B1_HVAC_JF-B1-03</text>
+<rect x="260" y="772" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="786" font-size="12">JF3-S</text>
+<rect x="520" y="772" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="786" font-size="12">Jet Fan 3 Status</text>
+<rect x="900" y="772" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="786" font-size="12">VFC</text>
+<rect x="20" y="796" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="810" font-size="12">GCEC_B1_HVAC_JF-B1-01</text>
+<rect x="260" y="796" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="810" font-size="12">JF1-S</text>
+<rect x="520" y="796" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="810" font-size="12">Jet Fan 1 Command</text>
+<rect x="900" y="796" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="810" font-size="12">24Vac</text>
+<rect x="20" y="820" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="834" font-size="12">GCEC_B1_HVAC_JF-B1-02</text>
+<rect x="260" y="820" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="834" font-size="12">JF2-S</text>
+<rect x="520" y="820" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="834" font-size="12">Jet Fan 2 Command</text>
+<rect x="900" y="820" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="834" font-size="12">24Vac</text>
+<rect x="20" y="844" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="858" font-size="12">GCEC_B1_HVAC_JF-B1-03</text>
+<rect x="260" y="844" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="858" font-size="12">JF3-S</text>
+<rect x="520" y="844" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="858" font-size="12">Jet Fan 3 Command</text>
+<rect x="900" y="844" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="858" font-size="12">24Vac</text>
+<rect x="20" y="868" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="882" font-size="12">GCEC_B1_HVAC_JF-B1-03</text>
+<rect x="260" y="868" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="882" font-size="12">JF3-O</text>
+<rect x="520" y="868" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="882" font-size="12">Jet Fan 3 Speed</text>
+<rect x="900" y="868" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="882" font-size="12">0-10Vdc</text>
+<rect x="20" y="892" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="906" font-size="12"></text>
+<rect x="260" y="892" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="906" font-size="12"></text>
+<rect x="520" y="892" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="906" font-size="12"></text>
+<rect x="900" y="892" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="906" font-size="12"></text>
+<rect x="20" y="916" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="930" font-size="12"></text>
+<rect x="260" y="916" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="930" font-size="12"></text>
+<rect x="520" y="916" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="930" font-size="12"></text>
+<rect x="900" y="916" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="930" font-size="12"></text>
+<rect x="20" y="940" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="954" font-size="12"></text>
+<rect x="260" y="940" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="954" font-size="12"></text>
+<rect x="520" y="940" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="954" font-size="12"></text>
+<rect x="900" y="940" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="954" font-size="12"></text>
+<rect x="20" y="964" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="978" font-size="12">GCEC_B1_HVAC_JF-B1-01</text>
+<rect x="260" y="964" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="978" font-size="12">JF1-O</text>
+<rect x="520" y="964" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="978" font-size="12">Jet Fan 1 Speed</text>
+<rect x="900" y="964" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="978" font-size="12">0-10Vdc</text>
+<rect x="20" y="988" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1002" font-size="12">GCEC_B1_HVAC_JF-B1-02</text>
+<rect x="260" y="988" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1002" font-size="12">JF2-O</text>
+<rect x="520" y="988" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1002" font-size="12">Jet Fan 2 Speed</text>
+<rect x="900" y="988" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1002" font-size="12">0-10Vdc</text>
+<rect x="20" y="1012" width="240" height="78" fill="white" stroke="black"/>
+<text x="24" y="1026" font-size="12"></text>
+<rect x="260" y="1012" width="260" height="78" fill="white" stroke="black"/>
+<text x="264" y="1026" font-size="12">refer to system schedule</text>
+<rect x="520" y="1012" width="360" height="78" fill="white" stroke="black"/>
+<text x="524" y="1026" font-size="12"></text>
+<rect x="900" y="1012" width="260" height="78" fill="white" stroke="black"/>
+<text x="904" y="1026" font-size="12">OAF-B1-04,</text>
+<text x="904" y="1044" font-size="12">OAF-B1-05,</text>
+<text x="904" y="1062" font-size="12">CSF-B1-01/04,</text>
+<text x="904" y="1080" font-size="12">JF-B1-01/02/03</text>
+<rect x="20" y="1090" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1104" font-size="12">GCEC_B1_HVAC_CSF-B1-01</text>
+<rect x="260" y="1090" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1104" font-size="12">SF1-A</text>
+<rect x="520" y="1090" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1104" font-size="12">Supply Fan 1 Fault</text>
+<rect x="900" y="1090" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1104" font-size="12">VFC</text>
+<rect x="20" y="1114" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1128" font-size="12">GCEC_B1_HVAC_CSF-B1-04</text>
+<rect x="260" y="1114" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1128" font-size="12">SF4-A</text>
+<rect x="520" y="1114" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1128" font-size="12">Supply Fan 4 Fault</text>
+<rect x="900" y="1114" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1128" font-size="12">VFC</text>
+<rect x="20" y="1138" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1152" font-size="12">GCEC_B1_HVAC_JF-B1-01</text>
+<rect x="260" y="1138" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1152" font-size="12">JF1-A</text>
+<rect x="520" y="1138" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1152" font-size="12">Jet Fan 1 Fault</text>
+<rect x="900" y="1138" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1152" font-size="12">VFC</text>
+<rect x="20" y="1162" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1176" font-size="12">GCEC_B1_HVAC_JF-B1-02</text>
+<rect x="260" y="1162" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1176" font-size="12">JF2-A</text>
+<rect x="520" y="1162" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1176" font-size="12">Jet Fan 2 Fault</text>
+<rect x="900" y="1162" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1176" font-size="12">VFC</text>
+<rect x="20" y="1186" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1200" font-size="12">GCEC_B1_HVAC_JF-B1-03</text>
+<rect x="260" y="1186" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1200" font-size="12">JF3-A</text>
+<rect x="520" y="1186" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1200" font-size="12">Jet Fan 3 Fault</text>
+<rect x="900" y="1186" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1200" font-size="12">VFC</text>
+<rect x="20" y="1210" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1224" font-size="12">GCEC_B1_HVAC_OAF-B1-05</text>
+<rect x="260" y="1210" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1224" font-size="12">OAF5-A</text>
+<rect x="520" y="1210" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1224" font-size="12">Outside Air Fan 5 Fault</text>
+<rect x="900" y="1210" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1224" font-size="12">VFC</text>
+<rect x="20" y="1234" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1248" font-size="12">GCEC_B1_HVAC_OAF-B1-05</text>
+<rect x="260" y="1234" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1248" font-size="12">OAF5-S</text>
+<rect x="520" y="1234" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1248" font-size="12">Outside Air Fan 5 Status</text>
+<rect x="900" y="1234" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1248" font-size="12">VFC</text>
+<rect x="20" y="1258" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1272" font-size="12">GCEC_B1_HVAC_OAF-B1-04</text>
+<rect x="260" y="1258" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1272" font-size="12">OAF4-A</text>
+<rect x="520" y="1258" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1272" font-size="12">Outside Air Fan 4 Fault</text>
+<rect x="900" y="1258" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1272" font-size="12">VFC</text>
+<rect x="20" y="1282" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1296" font-size="12">GCEC_B1_HVAC_OAF-B1-04</text>
+<rect x="260" y="1282" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1296" font-size="12">OAF4-S</text>
+<rect x="520" y="1282" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1296" font-size="12">Outside Air Fan 4 Status</text>
+<rect x="900" y="1282" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1296" font-size="12">VFC</text>
+<rect x="20" y="1306" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1320" font-size="12"></text>
+<rect x="260" y="1306" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1320" font-size="12"></text>
+<rect x="520" y="1306" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1320" font-size="12"></text>
+<rect x="900" y="1306" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1320" font-size="12"></text>
+<rect x="20" y="1330" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1344" font-size="12">GCEC_B1_HVAC_OAF-B1-04</text>
+<rect x="260" y="1330" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1344" font-size="12">OAF-C</text>
+<rect x="520" y="1330" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1344" font-size="12">Outside Air Fan Command</text>
+<rect x="900" y="1330" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1344" font-size="12">24Vac</text>
+<rect x="20" y="1354" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1368" font-size="12">GCEC_B1_HVAC_OAF-B1-05</text>
+<rect x="260" y="1354" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1368" font-size="12">OAF-C</text>
+<rect x="520" y="1354" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1368" font-size="12">Outside Air Fan Command</text>
+<rect x="900" y="1354" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1368" font-size="12">24Vac</text>
+<rect x="20" y="1378" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1392" font-size="12"></text>
+<rect x="260" y="1378" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1392" font-size="12"></text>
+<rect x="520" y="1378" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1392" font-size="12"></text>
+<rect x="900" y="1378" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1392" font-size="12"></text>
+<rect x="20" y="1402" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1416" font-size="12"></text>
+<rect x="260" y="1402" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1416" font-size="12"></text>
+<rect x="520" y="1402" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1416" font-size="12"></text>
+<rect x="900" y="1402" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1416" font-size="12"></text>
+<rect x="20" y="1426" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1440" font-size="12"></text>
+<rect x="260" y="1426" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1440" font-size="12"></text>
+<rect x="520" y="1426" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1440" font-size="12"></text>
+<rect x="900" y="1426" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1440" font-size="12"></text>
+<rect x="20" y="1450" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1464" font-size="12"></text>
+<rect x="260" y="1450" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1464" font-size="12"></text>
+<rect x="520" y="1450" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1464" font-size="12"></text>
+<rect x="900" y="1450" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1464" font-size="12"></text>
+<rect x="20" y="1474" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1488" font-size="12"></text>
+<rect x="260" y="1474" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1488" font-size="12"></text>
+<rect x="520" y="1474" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1488" font-size="12"></text>
+<rect x="900" y="1474" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1488" font-size="12"></text>
+<rect x="20" y="1498" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1512" font-size="12"></text>
+<rect x="260" y="1498" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1512" font-size="12"></text>
+<rect x="520" y="1498" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1512" font-size="12"></text>
+<rect x="900" y="1498" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1512" font-size="12"></text>
+<rect x="20" y="1522" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1536" font-size="12">GCEC_B1_HVAC_PAC-B1-04</text>
+<rect x="260" y="1522" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1536" font-size="12">ZN-T</text>
+<rect x="520" y="1522" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1536" font-size="12">Zone Temperature</text>
+<rect x="900" y="1522" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1536" font-size="12">10k Type2</text>
+<rect x="20" y="1546" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1560" font-size="12">GCEC_B1_AIR_COMP_1</text>
+<rect x="260" y="1546" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1560" font-size="12">COMP-FLT</text>
+<rect x="520" y="1546" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1560" font-size="12">Compressor Fault</text>
+<rect x="900" y="1546" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1560" font-size="12">VFC</text>
+<rect x="20" y="1570" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1584" font-size="12">GCEC_B1_AIR_COMP_2</text>
+<rect x="260" y="1570" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1584" font-size="12">COMP-FLT</text>
+<rect x="520" y="1570" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1584" font-size="12">Compressor Fault</text>
+<rect x="900" y="1570" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1584" font-size="12">VFC</text>
+<rect x="20" y="1594" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1608" font-size="12">GCEC_B1_HVAC_PAC-B1-04</text>
+<rect x="260" y="1594" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1608" font-size="12">UNIT-S</text>
+<rect x="520" y="1594" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1608" font-size="12">Unit Status</text>
+<rect x="900" y="1594" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1608" font-size="12">VFC</text>
+<rect x="20" y="1618" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1632" font-size="12">GCEC_B1_HVAC_PAC-B1-04</text>
+<rect x="260" y="1618" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1632" font-size="12">PB-S</text>
+<rect x="520" y="1618" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1632" font-size="12">Manual Push Button Status</text>
+<rect x="900" y="1618" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1632" font-size="12">VFC</text>
+<rect x="20" y="1642" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1656" font-size="12"></text>
+<rect x="260" y="1642" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1656" font-size="12"></text>
+<rect x="520" y="1642" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1656" font-size="12"></text>
+<rect x="900" y="1642" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1656" font-size="12"></text>
+<rect x="20" y="1666" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1680" font-size="12"></text>
+<rect x="260" y="1666" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1680" font-size="12"></text>
+<rect x="520" y="1666" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1680" font-size="12"></text>
+<rect x="900" y="1666" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1680" font-size="12"></text>
+<rect x="20" y="1690" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1704" font-size="12">GCEC_B1_HVAC_PAC-B1-04</text>
+<rect x="260" y="1690" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1704" font-size="12">CCW-S</text>
+<rect x="520" y="1690" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1704" font-size="12">Unit Status</text>
+<rect x="900" y="1690" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1704" font-size="12">VFC</text>
+<rect x="20" y="1714" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1728" font-size="12">GCEC_B1_HVAC_PAC-B1-04</text>
+<rect x="260" y="1714" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1728" font-size="12">UNIT-FLT</text>
+<rect x="520" y="1714" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1728" font-size="12">Unit Fault</text>
+<rect x="900" y="1714" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1728" font-size="12">VFC</text>
+<rect x="20" y="1738" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1752" font-size="12">GCEC_B1_HVAC_PAC-B1-04</text>
+<rect x="260" y="1738" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1752" font-size="12">COMP-C</text>
+<rect x="520" y="1738" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1752" font-size="12">Compressor Command</text>
+<rect x="900" y="1738" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1752" font-size="12">24Vac</text>
+<rect x="20" y="1762" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1776" font-size="12">GCEC_B1_HVAC_PAC-B1-04</text>
+<rect x="260" y="1762" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1776" font-size="12">PB-IND</text>
+<rect x="520" y="1762" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1776" font-size="12">Manual Push Button LED</text>
+<rect x="900" y="1762" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1776" font-size="12">24Vac</text>
+<rect x="20" y="1786" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1800" font-size="12">GCEC_B1_HVAC_PAC-B1-04</text>
+<rect x="260" y="1786" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1800" font-size="12">CW-O</text>
+<rect x="520" y="1786" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1800" font-size="12">Isolation Valve Command</text>
+<rect x="900" y="1786" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1800" font-size="12">24Vac</text>
+<rect x="20" y="1810" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1824" font-size="12">GCEC_B1_AIR_COMP_1</text>
+<rect x="260" y="1810" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1824" font-size="12">COMP-C</text>
+<rect x="520" y="1810" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1824" font-size="12">Compressor Command</text>
+<rect x="900" y="1810" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1824" font-size="12">24Vac</text>
+<rect x="20" y="1834" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1848" font-size="12">GCEC_B1_AIR_COMP_2</text>
+<rect x="260" y="1834" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1848" font-size="12">COMP-C</text>
+<rect x="520" y="1834" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1848" font-size="12">Compressor Command</text>
+<rect x="900" y="1834" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1848" font-size="12">24Vac</text>
+<rect x="20" y="1858" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1872" font-size="12">GCEC_B1_HVAC_PAC-B1-04</text>
+<rect x="260" y="1858" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1872" font-size="12">UNIT-C</text>
+<rect x="520" y="1858" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1872" font-size="12">Fan High Speed</text>
+<rect x="900" y="1858" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1872" font-size="12">24Vac</text>
+<rect x="20" y="1882" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1896" font-size="12"></text>
+<rect x="260" y="1882" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1896" font-size="12"></text>
+<rect x="520" y="1882" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1896" font-size="12"></text>
+<rect x="900" y="1882" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1896" font-size="12"></text>
+<rect x="20" y="1906" width="240" height="24" fill="white" stroke="black"/>
+<text x="24" y="1920" font-size="12"></text>
+<rect x="260" y="1906" width="260" height="24" fill="white" stroke="black"/>
+<text x="264" y="1920" font-size="12"></text>
+<rect x="520" y="1906" width="360" height="24" fill="white" stroke="black"/>
+<text x="524" y="1920" font-size="12"></text>
+<rect x="900" y="1906" width="260" height="24" fill="white" stroke="black"/>
+<text x="904" y="1920" font-size="12"></text>
+</svg>
